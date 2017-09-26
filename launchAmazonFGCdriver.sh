@@ -7,13 +7,8 @@ then
     exit 1
 fi 
 
-result="$(xboxdrv --evdev "/dev/input/$eventNum" --config amazon.conf --no-extra-events --silent &)"
-err=`$result | sed -n -e '/[ ERROR ]/,$p'`
-if [[ "$err" == "" ]]
-then
-    echo "Driver now activated. Your Amazon Fire Game Controller should be recognized as an Xbox controller in Steam."
-else
-    echo "There was an error. Here is the output of xboxdrv:"
-    echo ""
-    echo "$result"
-fi
+echo "Attempting driver activation..."
+xboxdrv --evdev "/dev/input/$eventNum" --config amazon.conf --no-extra-events --silent &
+
+
+echo "Note that even if successful you might have to wait ~10-20 seconds for the controller to be usable by the system."
