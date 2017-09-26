@@ -1,13 +1,13 @@
 # Maintainer: Savvy Raghuvanshi <sraghuvanshi at college dot harvard dot edu>
 
 pkgname=amazon-fire-game-controller
-pkgver=1
+pkgver=6.6de0397
 pkgrel=1
 pkgdesc="Connect your Amazon Fire Game Controller as an Xbox Controller for use with Steam games."
 arch=('any')
 url="https://github.com/djsavvy/amazon-fire-game-controller"
 license=('GPL3')
-depends=('xboxdrv', 'bluez', 'bluez-utils', 'bluez-plugins')
+depends=('xboxdrv' 'bluez' 'bluez-utils' 'bluez-plugins')
 makedepends=('git')
 source=("git://github.com/djsavvy/amazon-fire-game-controller")
 md5sums=('SKIP')
@@ -20,6 +20,6 @@ pkgver() {
 
 package() {
     cd "$pkgname"
-    install -Dm755 "$pkgname.sh" "$pkgdir/usr/bin/$pkgname"
-    install -Dm444 "amazon.conf" "$pkgdir/usr/bin/$pkgname"
+    install -Dm755 "$srcdir/../$pkgname.sh" "$pkgdir/usr/bin/$pkgname"
+    install -Dm444 "$srcdir/../amazon.conf" "$pkgdir/usr/bin/$pkgname"
 }
