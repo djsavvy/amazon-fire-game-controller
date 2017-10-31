@@ -1,7 +1,7 @@
 # Maintainer: Savvy Raghuvanshi <sraghuvanshi at college dot harvard dot edu>
 
 pkgname=amazon-fire-game-controller
-pkgver=6.6de0397
+pkgver=7.db555eb
 pkgrel=1
 pkgdesc="Connect your Amazon Fire Game Controller as an Xbox Controller for use with Steam games."
 arch=('any')
@@ -21,5 +21,5 @@ pkgver() {
 package() {
     cd "$pkgname"
     install -Dm755 "$srcdir/../$pkgname.sh" "$pkgdir/usr/bin/$pkgname"
-    install -Dm444 "$srcdir/../amazon.conf" "$pkgdir/usr/bin/$pkgname"
+    install -Dm755 "$srcdir/../amazon.conf" "$pkgdir/usr/bin/$pkgname"
 }

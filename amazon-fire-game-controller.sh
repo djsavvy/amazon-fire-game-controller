@@ -11,4 +11,4 @@ echo "Attempting driver activation..."
 xboxdrv --evdev "/dev/input/$eventNum" --config amazon.conf --no-extra-events --silent &
 
 
-echo "Note that even if successful you might have to wait ~10-20 seconds for the controller to be usable by the system."
+echo "Note that even if successful you might have to wait ~30-60 seconds for the controller to be usable by the system."
