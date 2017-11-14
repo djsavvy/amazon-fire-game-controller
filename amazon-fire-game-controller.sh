@@ -16,6 +16,8 @@ fi
 echo "Attempting driver activation..."
 xboxdrv --evdev "/dev/input/$eventNum" --config amazon.conf --no-extra-events --silent &
 
+sleep 1 
+
 echo " "
 sudo rm "/dev/input/$eventNum"
 sudo rm "/dev/input/$jsNum"
