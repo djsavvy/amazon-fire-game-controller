@@ -1,2 +1,5 @@
 # amazon-fire-game-controller
-The source for the amazon-fire-game-controller AUR package. 
+
+(NOTE: This repository is no longer maintained, as my controller broke. Use at your own risk)
+
+Connect a 1st generation Amazon Fire Game Controller to your Arch Linux system. 
